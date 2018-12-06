@@ -14,9 +14,9 @@ console.log(serverEntry)
 app.get('*',function(req,res){
 	const appString = ReactSSR.renderToString(serverEntry)
 	
-	res.send(template.replace('<app></app>',appString))
+	res.send(template.replace('<!-- app -->',appString))
 })
 
-app.listen(3333,function(){
+app.listen(8888,function(){
 	console.log('listening 3333')
 })

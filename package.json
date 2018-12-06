@@ -10,7 +10,8 @@
     "build:server":"cross-env NODE_ENV=production webpack --config build/webpack.config.server.js",
     "build": "npm run clear && npm run build:app && npm run build:server",
     "start": "node ./server/server.js",
-    "clear": "rimraf dist"
+    "clear": "rimraf dist",
+    "dev":"cross-env NODE_ENV=dev webpack-dev-server --config build/webpack.config.client.js"
   },
   "author": "wml",
   "license": "ISC",
